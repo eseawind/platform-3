@@ -1,14 +1,24 @@
-*{
-    margin:0px;
-    padding:0px;
-    font-size:20px;
-    font-family:"微软雅黑";
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "微软雅黑";
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-.panel-header{
-    padding: 12px 8px;
+#context {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    overflow: hidden;
 }
 
-.panel-title{
-    font-size:18px;
+#cache {
+    width: 0px;
+    height: 0px;
+    display: none;
 }
