@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+
+<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %logger : %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.lml.platform">
+        <level value="DEBUG" />
+    </logger>
+    <logger name="org.hibernate">
+        <level value="INFO" />
+    </logger>
+     <logger name=" org.springframework">
+        <level value="INFO" />
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="console"/>
+    </root>
+
+</configuration>
