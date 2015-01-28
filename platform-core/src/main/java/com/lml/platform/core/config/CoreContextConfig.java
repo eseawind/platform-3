@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Import;
 @Import({ CoreDataSourceConfig.class, CoreJpaRepositoryConfig.class })
 @ComponentScan(basePackages = { "com.lml.platform.core.repository", "com.lml.platform.core.server" })
 public class CoreContextConfig {
-
+	
 	private final Logger logger = LoggerFactory.getLogger(CoreContextConfig.class);
 
 	public CoreContextConfig() {
