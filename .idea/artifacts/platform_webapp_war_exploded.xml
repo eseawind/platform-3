@@ -8,7 +8,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="E:\Repository\GitHub\platform\platform-webapp\target/MANIFEST.MF" />
+        <element id="file-copy" path="F:\Repositorys\GitHub\platform\platform-webapp\target/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="platform-webapp/web/Web" />
     </root>
