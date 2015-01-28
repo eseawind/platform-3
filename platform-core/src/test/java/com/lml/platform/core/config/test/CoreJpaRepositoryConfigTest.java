@@ -3,7 +3,6 @@ package com.lml.platform.core.config.test;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-import org.apache.commons.lang3.time.DateUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -41,33 +40,33 @@ public class CoreJpaRepositoryConfigTest {
 
 	@Test
 	public void testSaveDictionaryGroup() {
-		DictionaryGroup dictionaryGroup = new DictionaryGroup();
+		final DictionaryGroup dictionaryGroup = new DictionaryGroup();
 		dictionaryGroup.setName("测试字典分组的名称");
 		dictionaryGroup.setRemark("测试字典分组的备注");
 		dictionaryGroup.setSort(0);
-		DictionaryGroup pDictionaryGroup = dictionaryGroupRepository.save(dictionaryGroup);
+		final DictionaryGroup pDictionaryGroup = dictionaryGroupRepository.save(dictionaryGroup);
 		logger.debug("pDictionaryGroup {}", pDictionaryGroup);
 	}
 
 	@Test
 	public void testUpdateDictionaryGroup() {
-		DictionaryGroup dictionaryGroup = dictionaryGroupRepository.findOne(1);
+		final DictionaryGroup dictionaryGroup = dictionaryGroupRepository.findOne(1);
 		dictionaryGroup.setName("我被修改了");
 		dictionaryGroupRepository.save(dictionaryGroup);
 	}
 
 	@Test
 	public void testFindByVisible() {
-		List<DictionaryGroup> ds = dictionaryGroupRepository.findByVisible(false);
+		final List<DictionaryGroup> ds = dictionaryGroupRepository.findByVisible(false);
 		logger.debug("ds {}", ds);
 	}
 
 	@Test
 	public void findByCreatedDateBetween() throws Exception {
 
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-		List<DictionaryGroup> ds = dictionaryGroupRepository.findByCreatedDateBetween(simpleDateFormat.parse("2015-01-20"), simpleDateFormat.parse("2015-01-27"));
+		final List<DictionaryGroup> ds = dictionaryGroupRepository.findByCreatedDateBetween(simpleDateFormat.parse("2015-01-20"), simpleDateFormat.parse("2015-01-27"));
 
 		logger.debug("ds {}", ds);
 

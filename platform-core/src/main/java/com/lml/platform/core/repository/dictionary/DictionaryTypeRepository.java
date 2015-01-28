@@ -1,13 +1,13 @@
 package com.lml.platform.core.repository.dictionary;
 
-import com.lml.platform.core.model.dictionary.DictionaryGroup;
-import com.lml.platform.core.model.dictionary.DictionaryType;
-import com.lml.platform.core.repository.support.JpaAuditRepository;
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
-import java.util.List;
+import com.lml.platform.core.model.dictionary.DictionaryType;
+import com.lml.platform.core.repository.support.JpaAuditRepository;
 
 public interface DictionaryTypeRepository extends JpaAuditRepository<DictionaryType> {
 
